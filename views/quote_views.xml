@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_quote_form" model="ir.ui.view">
+        <field name="name">quote.form</field>
+        <field name="model">quote</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="client_id"/>
+                        <field name="line_ids">
+                            <tree editable="bottom">
+                                <field name="colis_id"/>
+                                <field name="price"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_quote_tree" model="ir.ui.view">
+        <field name="name">quote.tree</field>
+        <field name="model">quote</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="line_ids"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_quote" model="ir.actions.act_window">
+        <field name="name">Quotes</field>
+        <field name="res_model">quote</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_quote" name="Quotes" parent="menu_tariff_zone_root" action="action_quote"/>
+
+</odoo>

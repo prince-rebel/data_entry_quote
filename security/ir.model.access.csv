@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_data_entry_quote_tariff_grid,data_entry_quote.tariff.grid.user,model_tariff_grid,base.group_user,1,1,1,1
+access_data_entry_quote_colis,data_entry_quote.colis.user,model_colis,base.group_user,1,1,1,1
+access_data_entry_quote_quote,data_entry_quote.quote.user,model_quote,base.group_user,1,1,1,1
+access_data_entry_quote_quote_line,data_entry_quote.quote.line.user,model_quote_line,base.group_user,1,1,1,1
+access_data_entry_quote_tariff_zone,data_entry_quote.tariff.zone.user,model_tariff_zone,base.group_user,1,1,1,1

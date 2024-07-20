@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_tariff_grid_form" model="ir.ui.view">
+        <field name="name">tariff.grid.form</field>
+        <field name="model">tariff.grid</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="colis_type"/>
+                        <field name="weight"/>
+                        <field name="zone_id"/>
+                        <field name="amount"/>
+                        <field name="client_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tariff_grid_tree" model="ir.ui.view">
+        <field name="name">tariff.grid.tree</field>
+        <field name="model">tariff.grid</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="colis_type"/>
+                <field name="weight"/>
+                <field name="zone_id"/>
+                <field name="amount"/>
+                <field name="client_ids"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_tariff_grid" model="ir.actions.act_window">
+        <field name="name">Tariff Grids</field>
+        <field name="res_model">tariff.grid</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_tariff_grid" name="Tariff Grids" parent="menu_tariff_zone_root" action="action_tariff_grid"/>
+
+</odoo>

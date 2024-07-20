@@ -1,0 +1,46 @@
+<odoo>
+    <record id="view_colis_form" model="ir.ui.view">
+        <field name="name">colis.form</field>
+        <field name="model">colis</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="colis_type"/>
+                        <field name="weight"/>
+                        <field name="destination_country_id"/>
+                        <field name="client_id"/>
+                    </group>
+                    <footer>
+                        <button name="get_tariff" string="Calculate Tariff" type="object" class="btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_colis_tree" model="ir.ui.view">
+        <field name="name">colis.tree</field>
+        <field name="model">colis</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="colis_type"/>
+                <field name="weight"/>
+                <field name="destination_country_id"/>
+                <field name="client_id"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_colis" model="ir.actions.act_window">
+    <field name="name">Colis</field>
+    <field name="res_model">colis</field>
+    <field name="view_mode">tree,form</field>
+</record>
+<menuitem id="menu_colis" name="Colis" parent="menu_tariff_zone_root" action="action_colis"/>
+
+</odoo>
+
